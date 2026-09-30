@@ -1,0 +1,21 @@
+Page({
+    data:{
+      lightData:"",waterData:"",tempData:"",fertData:"",growData:""
+    },
+    setLight(e){this.setData({lightData:e.detail.value})},
+    setWater(e){this.setData({waterData:e.detail.value})},
+    setTemp(e){this.setData({tempData:e.detail.value})},
+    setFert(e){this.setData({fertData:e.detail.value})},
+    setGrow(e){this.setData({growData:e.detail.value})},
+    saveData(){
+      let obj = {
+        lightData:this.data.lightData,
+        waterData:this.data.waterData,
+        tempData:this.data.tempData,
+        fertData:this.data.fertData,
+        growData:this.data.growData
+      }
+      wx.setStorageSync("nowMonitor",obj)
+      wx.showToast({title:"数据保存成功"})
+    }
+  })

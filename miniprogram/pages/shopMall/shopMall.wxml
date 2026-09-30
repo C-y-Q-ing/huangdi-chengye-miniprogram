@@ -1,0 +1,17 @@
+<view class="shop-page">
+  <view class="title-bar">
+    <text class="page-title">脐橙周边好物</text>
+  </view>
+
+  <view class="goods-list">
+    <view class="goods-card" wx:for="{{goodsList}}" wx:key="id" bindtap="goDetail" data-id="{{item.id}}">
+      <image class="goods-img" src="{{item.img}}" mode="aspectFill"></image>
+      <view class="goods-info">
+        <view class="goods-name">{{item.title}}</view>
+        <view class="goods-price">¥{{item.price}}</view>
+        <view class="goods-desc">{{item.desc}}</view>
+      </view>
+      <view class="add-cart-btn" catchtap="addToCart" data-id="{{item.id}}">+</view>
+    </view>
+  </view>
+</view>

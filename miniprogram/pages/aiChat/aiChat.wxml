@@ -1,0 +1,28 @@
+<view class="chat-page">
+  <scroll-view class="chat-list" scroll-y scroll-with-animation scroll-into-view="{{scrollId}}">
+    <view class="chat-item {{item.type}}" wx:for="{{chatList}}" wx:key="index" id="msg-{{index}}">
+      <!-- AI头像（左） -->
+      <view class="avatar ai-avatar" wx:if="{{item.type === 'ai'}}">🍊</view>
+
+      <!-- 用户文字/图片（右） -->
+      <view class="bubble user-text" wx:if="{{item.type === 'user'}}">
+        {{item.content}}
+      </view>
+      <image class="bubble user-img" wx:if="{{item.type === 'user-image'}}" src="{{item.content}}"></image>
+
+      <!-- AI回复（左） -->
+      <view class="bubble ai-text" wx:if="{{item.type === 'ai'}}">
+        {{item.content}}
+      </view>
+
+      <!-- 用户头像（右） -->
+      <view class="avatar user-avatar" wx:if="{{item.type !== 'ai'}}">我</view>
+    </view>
+  </scroll-view>
+
+  <view class="input-box">
+    <button class="img-btn" bindtap="chooseImage">📷</button>
+    <input class="input" placeholder="说点什么..." value="{{inputText}}" bindinput="handleInput" />
+    <button class="send-btn" bindtap="sendMessage">发送</button>
+  </view>
+</view>

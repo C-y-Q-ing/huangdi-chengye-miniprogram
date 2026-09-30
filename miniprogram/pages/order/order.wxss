@@ -1,0 +1,87 @@
+.order-page {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding-bottom: 120rpx;
+  }
+  
+  .order-tabs {
+    display: flex;
+    background-color: #fff;
+    padding: 20rpx 0;
+  }
+  
+  .tab-item {
+    flex: 1;
+    text-align: center;
+    font-size: 28rpx;
+    color: #666;
+  }
+  
+  .tab-item.active {
+    color: #27ae60;
+    font-weight: bold;
+    border-bottom: 2rpx solid #27ae60;
+  }
+  
+  .order-item {
+    background-color: #fff;
+    margin: 20rpx;
+    border-radius: 12rpx;
+    padding: 30rpx;
+  }
+  
+  .order-title {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .order-info {
+    margin-top: 20rpx;
+    font-size: 26rpx;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .item-total {
+    margin-top: 10rpx;
+    color: #ff4d4f;
+    font-weight: bold;
+  }
+  
+  .confirm-btn {
+    margin-top: 20rpx;
+    width: 200rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    border-radius: 30rpx;
+    font-size: 26rpx;
+  }
+  
+  .total-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 30rpx;
+    box-shadow: 0 -2rpx 10rpx rgba(0,0,0,0.05);
+  }
+  
+  .total-info {
+    font-size: 30rpx;
+    color: #333;
+  }
+  
+  .pay-btn {
+    background-color: #ff4d4f;
+    color: #fff;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    font-size: 28rpx;
+    padding: 0 40rpx;
+  }

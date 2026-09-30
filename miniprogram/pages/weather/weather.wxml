@@ -1,0 +1,5 @@
+<view class="pad15" style="text-align:center">
+  <view style="font-size:36rpx;margin:30rpx 0">七日天气预览</view>
+  <view style="background:#fff;padding:20rpx;border-radius:10rpx">今日晴，温度22-30℃，适宜脐橙生长</view>
+  <view style="background:#fff;padding:20rpx;border-radius:10rpx;margin-top:15rpx;color:red">近期无寒潮霜冻预警</view>
+</view>

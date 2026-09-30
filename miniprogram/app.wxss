@@ -1,0 +1,29 @@
+page{
+    font-size: 28rpx;
+    background-color: #f5f5f5;
+  }
+  view{
+    box-sizing: border-box;
+  }
+  .flex-row{display: flex;flex-direction: row;}
+  .flex-col{display: flex;flex-direction: column;}
+  .justify-between{justify-content: space-between;}
+  .align-center{align-items: center;}
+  .pad15{padding:15rpx;}
+  .mar10{margin:10rpx;}
+  .btn-green{
+    background:#ff9800;
+    color:#fff;
+    border-radius:10rpx;
+  }
+  .btn-gray{
+    background:#eee;
+    color:#666;
+    border-radius:10rpx;
+  }
+  input,textarea{
+    background:#fff;
+    padding:20rpx;
+    margin:15rpx 0;
+    border-radius:8rpx;
+  }

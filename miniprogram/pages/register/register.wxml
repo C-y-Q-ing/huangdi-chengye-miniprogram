@@ -1,0 +1,12 @@
+<view class="pad15">
+  <view style="text-align:center;margin:40rpx 0">
+    <image src="{{userAvatar}}" style="width:120rpx;height:120rpx;border-radius:50%;background:#eee;" bindtap="changeAvatar"></image>
+    <view style="color:#999;margin-top:10rpx">点击更换头像</view>
+  </view>
+  <input placeholder="设置昵称" value="{{nickname}}" bindinput="setNick"/>
+  <input placeholder="手机号码" bindinput="setPhone"/>
+  <input placeholder="设置登录密码" password bindinput="setPwd"/>
+  <input placeholder="确认密码" password bindinput="setRePwd"/>
+  <button class="btn-green mar10" bindtap="regBtn">提交注册</button>
+  <view style="text-align:center;margin-top:30rpx;color:#666" bindtap="toLogin">已有账号，去登录</view>
+</view>

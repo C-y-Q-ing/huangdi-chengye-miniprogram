@@ -1,0 +1,109 @@
+.chat-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+  }
+  
+  .chat-list {
+    flex: 1;
+    padding: 20rpx;
+  }
+  
+  .chat-item {
+    margin-bottom: 25rpx;
+    display: flex;
+  }
+  
+  .user-text, .user-img {
+    background: #ff9800;
+    color: #fff;
+    margin-left: auto;
+  }
+  
+  .ai-text {
+    background: #fff;
+    color: #333;
+    margin-right: auto;
+  }
+  
+  .bubble {
+    max-width: 70%;
+    padding: 20rpx 25rpx;
+    border-radius: 12rpx;
+    font-size: 28rpx;
+    line-height: 1.5;
+  }
+  
+  .user-img {
+    max-width: 60%;
+    padding: 0;
+    border-radius: 12rpx;
+  }
+  
+  .input-box {
+    display: flex;
+    padding: 20rpx;
+    background: #fff;
+    border-top: 1rpx solid #eee;
+  }
+  
+  .img-btn {
+    width: 70rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    border-radius: 50%;
+    background: #f2f2f2;
+    border: none;
+    margin-right: 15rpx;
+  }
+  
+  .input {
+    flex: 1;
+    height: 70rpx;
+    border-radius: 50rpx;
+    border: 1rpx solid #ddd;
+    padding: 0 25rpx;
+  }
+  
+  .send-btn {
+    margin-left: 15rpx;
+    background: #09aa2c;
+    color: #fff;
+    border-radius: 50rpx;
+    padding: 0 25rpx;
+  }
+  /* 头像新增 */
+.avatar {
+    width: 64rpx;
+    height: 64rpx;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28rpx;
+    flex-shrink: 0;
+  }
+  .ai-avatar {
+    background: #aea527;
+    color: #fff;
+    margin-right: 15rpx;
+  }
+  .user-avatar {
+    background: #27ae76;
+    color: #fff;
+    margin-left: 15rpx;
+  }
+  
+  /* 聊天项布局微调 */
+  .chat-item {
+    margin-bottom: 25rpx;
+    display: flex;
+    align-items: flex-start;
+  }
+  .ai {
+    justify-content: flex-start;
+  }
+  .user, .user-image {
+    justify-content: flex-end;
+  }

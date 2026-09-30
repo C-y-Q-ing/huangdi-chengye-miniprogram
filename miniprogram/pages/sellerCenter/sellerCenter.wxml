@@ -1,0 +1,13 @@
+<view class="center-page">
+  <button bindtap="goPublish">发布商品</button>
+  <button bindtap="goSellerOrder">订单管理</button>
+
+  <view class="goods-list">
+    <text>我发布的商品</text>
+    <view wx:for="{{myGoods}}" wx:key="id" class="item">
+      <text>{{item.title}}</text>
+      <text>¥{{item.price}}/{{item.unit}}</text>
+      <button size="mini" bindtap="delGoods" data-id="{{item.id}}">删除</button>
+    </view>
+  </view>
+</view>

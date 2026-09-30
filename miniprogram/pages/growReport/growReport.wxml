@@ -1,0 +1,42 @@
+<view class="report-page">
+  <view class="header-card">
+    <text class="title">脐橙生长报告</text>
+    <text class="desc">基于你的种植记录，生成脐橙生长周期分析</text>
+  </view>
+
+  <view class="report-card">
+    <view class="section-title">📊 生长阶段分析</view>
+    <view class="stage-item">
+      <text class="stage-name">当前阶段：膨果期</text>
+      <text class="stage-tip">果实快速膨大，需水量和肥量需求增加</text>
+    </view>
+    <view class="stage-item">
+      <text class="stage-name">下一阶段：转色成熟期</text>
+      <text class="stage-tip">预计成熟期：11月下旬-次年1月</text>
+    </view>
+  </view>
+
+  <view class="report-card">
+    <view class="section-title">💡 管理建议</view>
+    <view class="suggest-item">
+      <text>✅ 水肥管理：膨果期建议保持土壤湿润，适当补充钾肥，促进果实膨大与糖分积累。</text>
+    </view>
+    <view class="suggest-item">
+      <text>✅ 病虫害防治：重点防范红蜘蛛、炭疽病，定期检查叶片背面。</text>
+    </view>
+    <view class="suggest-item">
+      <text>✅ 光照管理：保证充足光照，促进果实着色，提升甜度。</text>
+    </view>
+  </view>
+
+  <view class="report-card">
+    <view class="section-title">📈 历史记录概览</view>
+    <view class="record-item" wx:for="{{recentRecords}}" wx:key="id">
+      <text class="record-date">{{item.date}}</text>
+      <text class="record-content">{{item.type}}：{{item.content}}</text>
+    </view>
+    <view class="empty-tip" wx:if="{{recentRecords.length === 0}}">
+      暂无种植记录，添加记录后可生成更精准的报告
+    </view>
+  </view>
+</view>

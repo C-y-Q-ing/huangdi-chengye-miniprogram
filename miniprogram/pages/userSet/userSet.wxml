@@ -1,0 +1,17 @@
+<view class="pad15">
+  <view style="background:#fff;border-radius:10rpx;padding:20rpx;margin-bottom:20rpx" bindtap="changeHead">
+    <view class="flex-row justify-between align-center">
+      <text>个人头像</text>
+      <image src="{{userInfo.avatar?userInfo.avatar:'/static/default.png'}}" style="width:80rpx;height:80rpx;border-radius:50%;background:#eee;"></image>
+    </view>
+  </view>
+  <view style="background:#fff;border-radius:10rpx;padding:20rpx;margin-bottom:20rpx">
+    <view class="flex-row justify-between align-center">
+      <text>昵称</text>
+      <input value="{{userInfo.nickName}}" bindinput="editName"/>
+    </view>
+  </view>
+  <button class="btn-gray mar10" bindtap="toLoginPage">前往登录</button>
+  <button class="btn-gray mar10" bindtap="toRegPage">账号注册</button>
+  <button class="btn-green mar10" bindtap="loginOut">退出登录</button>
+</view>

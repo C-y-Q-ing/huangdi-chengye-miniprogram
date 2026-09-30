@@ -1,0 +1,12 @@
+<view class="pad15">
+  <view style="background:#fff;padding:15rpx;border-radius:10rpx;margin-bottom:15rpx">
+    <view>买家采购订单</view>
+    <view class="flex-row justify-between mar10">
+      <text>脐橙5斤</text>
+      <text style="color:red">¥19.0</text>
+    </view>
+    <view style="text-align:right">
+      <button size="mini" class="btn-green">确认发货</button>
+    </view>
+  </view>
+</view>

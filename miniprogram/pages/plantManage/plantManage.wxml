@@ -1,0 +1,57 @@
+<view class="plant-page">
+  <!-- 顶部介绍 -->
+  <view class="header-card">
+    <text class="title">我的种植园</text>
+    <text class="desc">黄地村脐橙种植户专属管理后台</text>
+  </view>
+
+  <!-- 功能入口卡片 -->
+  <view class="function-list">
+    <view class="function-card" bindtap="toPlantRecord">
+      <view class="card-icon">📝</view>
+      <view class="card-content">
+        <text class="card-title">种植记录</text>
+        <text class="card-desc">记录脐橙生长、施肥、采摘情况</text>
+      </view>
+    </view>
+
+    <view class="function-card" bindtap="toPestControl">
+      <view class="card-icon">🐛</view>
+      <view class="card-content">
+        <text class="card-title">病虫害防治</text>
+        <text class="card-desc">查看脐橙病虫害方案，一键咨询AI</text>
+      </view>
+    </view>
+
+    <view class="function-card" bindtap="toMonitorData">
+      <view class="card-icon">📊</view>
+      <view class="card-content">
+        <text class="card-title">监控数据</text>
+        <text class="card-desc">查看园区温湿度、光照数据</text>
+      </view>
+    </view>
+
+    <view class="function-card" bindtap="toGrowReport">
+      <view class="card-icon">📈</view>
+      <view class="card-content">
+        <text class="card-title">生长报告</text>
+        <text class="card-desc">查看脐橙生长周期分析报告</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 最近种植记录列表 -->
+  <view class="record-section">
+    <text class="section-title">最近种植记录</text>
+    <view wx:if="{{records.length === 0}}" class="empty-tip">
+      暂无记录，快去添加吧
+    </view>
+    <view wx:for="{{records}}" wx:key="id" class="record-item">
+      <view class="record-header">
+        <text class="record-type">{{item.type}}</text>
+        <text class="record-date">{{item.date}}</text>
+      </view>
+      <text class="record-content">{{item.content}}</text>
+    </view>
+  </view>
+</view>

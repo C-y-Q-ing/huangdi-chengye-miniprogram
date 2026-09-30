@@ -1,0 +1,22 @@
+<view class="record-page">
+  <view class="form-card">
+    <view class="form-item">
+      <text class="label">记录类型</text>
+      <picker bindchange="onTypeChange" value="{{typeIndex}}" range="{{typeList}}">
+        <view class="picker-text">{{typeList[typeIndex]}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">日期</text>
+      <input type="date" bindinput="onDateInput" />
+    </view>
+
+    <view class="form-item">
+      <text class="label">记录内容</text>
+      <textarea placeholder="例如：今天给脐橙施了有机肥，叶片长势良好" bindinput="onContentInput" />
+    </view>
+
+    <button class="submit-btn" bindtap="saveRecord">保存记录</button>
+  </view>
+</view>

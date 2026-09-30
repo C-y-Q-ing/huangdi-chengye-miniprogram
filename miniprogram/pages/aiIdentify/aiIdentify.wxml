@@ -1,0 +1,6 @@
+<view class="pad15" style="text-align:center">
+  <view style="width:300rpx;height:300rpx;background:#eee;margin:30rpx auto;border-radius:10rpx" wx:if="{{!imgSrc}}">点击下方按钮上传图片</view>
+  <image src="{{imgSrc}}" style="width:300rpx;height:300rpx;border-radius:10rpx" wx:else></image>
+  <button class="btn-green mar10" bindtap="chooseImg">拍照/相册选图</button>
+  <view style="margin-top:20rpx;text-align:left;background:#fff;padding:15rpx;border-radius:10rpx;white-space:pre-line">{{resultInfo}}</view>
+</view>

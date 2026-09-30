@@ -1,0 +1,8 @@
+<view class="pad15">
+  <input placeholder="今日光照情况" value="{{lightData}}" bindinput="setLight"/>
+  <input placeholder="土壤水分干湿" value="{{waterData}}" bindinput="setWater"/>
+  <input placeholder="田间平均温度" value="{{tempData}}" bindinput="setTemp"/>
+  <input placeholder="近期施肥情况" value="{{fertData}}" bindinput="setFert"/>
+  <input placeholder="果树整体长势" value="{{growData}}" bindinput="setGrow"/>
+  <button class="btn-green mar10" bindtap="saveData">保存今日监测数据</button>
+</view>

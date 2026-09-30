@@ -1,0 +1,10 @@
+<view class="pad15">
+  <view style="margin-top:160rpx;font-size:40rpx;font-weight:bold;text-align:center">黄地橙丰</view>
+  <input placeholder="请输入账号" value="{{username}}" bindinput="setUser"/>
+  <input placeholder="请输入密码" password value="{{pwd}}" bindinput="setPwd"/>
+  <button class="btn-green mar10" bindtap="loginBtn">立即登录</button>
+  <view class="flex-row justify-between mar10">
+    <text bindtap="toRegister">注册账号</text>
+    <text>忘记密码</text>
+  </view>
+</view>

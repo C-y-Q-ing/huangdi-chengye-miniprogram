@@ -1,0 +1,34 @@
+<view class="index-page">
+  <!-- 顶部搜索栏 -->
+  <view class="search-bar">
+    <view class="search-input-wrap">
+      <image class="search-icon" src="/static/search.png"></image>
+      <input class="search-input" placeholder="搜索脐橙货源" value="{{keyword}}" bindinput="handleSearch"/>
+    </view>
+  </view>
+
+  <!-- 商品列表 -->
+  <scroll-view class="goods-scroll" scroll-y>
+    <view class="goods-list">
+      <view class="goods-card" wx:for="{{goodsList}}" wx:key="id" bindtap="goDetail" data-id="{{item.id}}">
+        <!-- 商品图片占位 -->
+        <image class="goods-img" src="{{item.img}}" mode="aspectFill"></image>
+
+        <!-- 商品信息 -->
+        <view class="goods-info">
+          <view class="goods-title">{{item.title}}</view>
+          <view class="goods-tag" wx:if="{{item.isLocal}}">产地直发</view>
+          <view class="price-row">
+            <text class="price-symbol">¥</text>
+            <text class="price-num">{{item.price}}</text>
+            <text class="price-unit">/千克</text>
+          </view>
+          <view class="goods-tip">{{item.type}}</view>
+        </view>
+
+        <!-- 加购按钮（仅可下单商品显示） -->
+        <view wx:if="{{item.canBuy}}" class="add-cart-btn" catchtap="addToCart" data-id="{{item.id}}">+</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

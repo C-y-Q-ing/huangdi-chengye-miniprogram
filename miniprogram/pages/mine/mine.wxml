@@ -1,0 +1,34 @@
+<view>
+  <view style="background:#f0c06d;padding:40rpx 20rpx;color:#fff">
+    <view wx:if="{{!isLogin}}" bindtap="toLogin">
+      <view style="font-size:32rpx">点击登录/注册</view>
+    </view>
+    <view wx:else class="flex-row align-center">
+      <image src="{{userInfo.avatar?userInfo.avatar:'/static/default.png'}}" style="width:100rpx;height:100rpx;border-radius:50%;background:#0b0909;"></image>
+      <view style="margin-left:20rpx">
+        <view style="font-size:32rpx;color:#121111">{{userInfo.nickName}}</view>
+        <view style="font-size:24rpx;opacity:0.8;color: #121111;">{{roleName}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="pad15" style="background:#fff;margin:15rpx;border-radius:10rpx" bindtap="toSet">
+    <text>账号与设置</text>
+    <text style="float:right">></text>
+  </view>
+
+  <view class="pad15" style="background:#fff;margin:15rpx;border-radius:10rpx">
+    <view class="flex-row justify-between pad15" bindtap="toOrder">
+      <text>我的订单</text><text>></text>
+    </view>
+    <view class="flex-row justify-between pad15" bindtap="toSeller">
+      <text>切换卖家中心</text><text>></text>
+    </view>
+    <view class="flex-row justify-between pad15" bindtap="toPlant">
+      <text>进入种植管理</text><text>></text>
+    </view>
+    <view class="flex-row justify-between pad15" bindtap="toAiChat">
+      <text>AI农技助手</text><text>></text>
+    </view>
+  </view>
+</view>

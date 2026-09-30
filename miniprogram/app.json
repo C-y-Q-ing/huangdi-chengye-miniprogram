@@ -1,0 +1,69 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/shopMall/shopMall",
+        "pages/cart/cart",
+        "pages/mine/mine",
+        "pages/login/login",
+        "pages/register/register",
+        "pages/userSet/userSet",
+        "pages/goodsDetail/goodsDetail",
+        "pages/order/order",
+        "pages/sellerCenter/sellerCenter",
+        "pages/publishGoods/publishGoods",
+        "pages/sellerOrder/sellerOrder",
+        "pages/plantManage/plantManage",
+        "pages/monitorData/monitorData",
+        "pages/aiIdentify/aiIdentify",
+        "pages/growReport/growReport",
+        "pages/aiChat/aiChat",
+        "pages/weather/weather",
+        "pages/plantRecord/plantRecord",
+        "pages/pestControl/pestControl",
+        "pages/harvestPlan/harvestPlan"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#f0c06d",
+        "navigationBarTitleText": "黄地橙丰",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#666",
+        "selectedColor": "#27ae60",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/shopMall/shopMall",
+                "text": "周边商城"
+            },
+            {
+                "pagePath": "pages/cart/cart",
+                "text": "购物车"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents",
+    "permission": {
+        "scope.camera": {
+          "desc": "用于拍摄脐橙照片"
+        },
+        "scope.album": {
+          "desc": "用于上传商品图片和脐橙照片"
+        }
+      },
+    "networkTimeout": {
+        "request": 15000,
+        "downloadFile": 15000
+    }
+}

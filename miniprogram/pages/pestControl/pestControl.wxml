@@ -1,0 +1,28 @@
+<view class="pest-page">
+  <view class="header">
+    <text class="title">脐橙病虫害防治</text>
+    <text class="desc">常见病虫害一键咨询AI助手</text>
+  </view>
+
+  <view class="pest-list">
+    <view class="pest-item" bindtap="goToAI" data-question="脐橙溃疡病的症状和防治方法是什么？">
+      <text class="pest-name">溃疡病</text>
+      <text class="pest-tip">叶片/果实出现溃疡状病斑</text>
+    </view>
+
+    <view class="pest-item" bindtap="goToAI" data-question="脐橙炭疽病怎么防治？">
+      <text class="pest-name">炭疽病</text>
+      <text class="pest-tip">叶片出现褐色斑点，易落叶</text>
+    </view>
+
+    <view class="pest-item" bindtap="goToAI" data-question="脐橙红蜘蛛怎么防治？">
+      <text class="pest-name">红蜘蛛</text>
+      <text class="pest-tip">叶片发黄发白，背面有小虫</text>
+    </view>
+
+    <view class="pest-item" bindtap="goToAI" data-question="脐橙潜叶蛾怎么防治？">
+      <text class="pest-name">潜叶蛾</text>
+      <text class="pest-tip">叶片出现白色虫道，卷曲变形</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<view class="order-page">
+  <!-- 订单状态标签 -->
+  <view class="order-tabs">
+    <view class="tab-item active">全部</view>
+    <view class="tab-item">待付款</view>
+    <view class="tab-item">待发货</view>
+    <view class="tab-item">已完成</view>
+  </view>
+
+  <!-- 订单列表 -->
+  <view class="order-list">
+    <view class="order-item" wx:for="{{orderList}}" wx:key="id+spec">
+      <view class="order-title">{{item.title}}</view>
+      <view class="order-info">
+        <view class="spec-info" wx:if="{{!item.isShopMall}}">果型：{{item.spec}}</view>
+        <view class="spec-info" wx:if="{{item.isShopMall}}">规格：{{item.spec}}</view>
+        <!-- 关键：只显示数字+单位，不拼接任何其他字符 -->
+        <view class="quantity">数量：{{item.num}} {{item.unit}}</view>
+        <view class="price">单价：¥{{item.price}}/{{item.unit}}</view>
+        <view class="item-total">小计：¥{{item.subTotal}}</view>
+      </view>
+      <button class="confirm-btn" disabled="{{item.status === '已完成'}}">
+        {{item.status === '已完成' ? '已收货' : '确认收货'}}
+      </button>
+    </view>
+  </view>
+
+  <!-- 订单总价 -->
+  <view class="total-bar">
+    <view class="total-info">订单合计：¥{{totalPrice}}</view>
+    <button class="pay-btn" bindtap="submitOrder">提交订单</button>
+  </view>
+</view>

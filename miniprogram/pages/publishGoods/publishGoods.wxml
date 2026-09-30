@@ -1,0 +1,26 @@
+<view class="publish-page">
+  <view class="form-item">
+    <text>商品名称</text>
+    <input placeholder="输入脐橙/周边商品名称" bindinput="onTitleInput" />
+  </view>
+  <view class="form-item">
+    <text>单价（元）</text>
+    <input type="digit" placeholder="输入价格" bindinput="onPriceInput" />
+  </view>
+  <view class="form-item">
+    <text>单位</text>
+    <picker bindchange="onUnitChange" value="{{unitIndex}}" range="{{unitList}}">
+      <view class="picker">{{unitList[unitIndex]}}</view>
+    </picker>
+  </view>
+  <view class="form-item">
+    <text>商品图片</text>
+    <button bindtap="chooseImage">选择图片</button>
+    <image wx:if="{{imgPath}}" src="{{imgPath}}" mode="widthFix" class="preview-img" />
+  </view>
+  <view class="form-item">
+    <text>商品描述</text>
+    <textarea placeholder="输入商品描述" bindinput="onDescInput" />
+  </view>
+  <button class="publish-btn" bindtap="submitGoods">发布商品</button>
+</view>
